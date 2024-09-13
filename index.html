@@ -9,9 +9,11 @@
   <body>
     <header>
       <nav class="header-nav">
-        <div class="logo">
-          <h3 class="name">Daria</h3>
-          <h3 class="surname">Zakharchenko</h3>
+        <div>
+          <a href="#" class="logo">
+            <h3 class="name">Daria</h3>
+            <h3 class="surname">Zakharchenko</h3>
+          </a>
         </div>
         <ul class="navigation">
           <li>
@@ -21,15 +23,16 @@
             <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="#tech-skills">Tech Skills</a>
-          </li>
-          <li>
-            <a href="#soft-skills">Soft Skills</a>
+            <a href="#tech-skills">Skills</a>
           </li>
           <li>
             <a href="#contacts">Contacts</a>
           </li>
         </ul>
+        <label id="switch" class="switch">
+            <input type="checkbox" onchange="toggleTheme()" id="slider">
+            <span class="slider round"></span>
+        </label>
       </nav>
     </header>
     <main>
@@ -50,7 +53,7 @@
       </section>
       <section id="about-me" class="about-me">
         <div class="about-container">
-          <h2 classs="section-name">About me</h2>
+          <h2 class="section-name">About me</h2>
           <p>Hi, I'm Daria, a fourth-year student of Sumy State University.</p>
           <p>
             Fast learner, analitical and hard-working computer technology
@@ -66,7 +69,7 @@
         </div>
       </section>
       <section id="projects" class="projects">
-        <h2 classs="section-name">Projects</h2>
+        <h2 class="section-name">Projects</h2>
         <ul class="projects-box">
           <li class="project1">
             <a href="https://dainntyy.github.io/construction_company/" target="_blank">
@@ -100,7 +103,7 @@
         </ul>
       </section>
       <section id="tech-skills" class="skills">
-        <h2 classs="section-name">Tech Skills</h2>
+        <h2 class="section-name">Tech Skills</h2>
         <ol class="skills-box">
           <li>
             JavaScript
@@ -117,7 +120,7 @@
         </ol>
       </section>
       <section id="soft-skills" class="skills">
-        <h2 classs="section-name">Soft Skills</h2>
+        <h2 class="section-name">Soft Skills</h2>
         <ol class="skills-box">
           <li class="soft-items">Teamwork</li>
           <li class="soft-items">Creativity</li>
@@ -128,21 +131,38 @@
           </li>
         </ol>
       </section>
+      <section id="certificates" class="certificates">
+        <h2 class="section-name">Certificates</h2>
+        <ul class="cert-box">
+          <li class="cert-item">
+            <h3>AINTA: An Invitation To Act</h3>
+            <p>Volunteering project in Greece for refugees from different countries. We provided interesting activities for the mental, and physical well-being of refugees, their environmental awareness etc.</p>
+            <div class="image-container">
+              <img id="image1" src="./images/AINTA.jpeg" alt="ESC Certificate" class="certificate-img">
+            </div>
+          </li>
+        </ul>
+      </section>
       <section id="contacts" class="contacts">
         <h2 class="footer-name">Have any projects in mind?</h2>
         <ul class="contact-box">
           <li>
-            <span class="contact-type">C:</span>
+            <span class="contact-type">
+              <img src="./icons/phone.svg" alt="Phone" class="icon">:
+            </span>
             <a href="tell:+380504249420" class="contact-link">+380504249420</a>
           </li>
           <li>
-            <span class="contact-type">E:</span>
+            <span class="contact-type">
+              <img src="./icons/mail.svg" alt="Mail">:
+            </span>
             <a href="mailto:z2507dasha@gmail.com" class="contact-link"
               >z2507dasha@gmail.com</a
             >
           </li>
           <li>
-            <span class="contact-type">A:</span>
+            <span class="contact-type">
+              <img src="./icons/location.svg" alt="Location">:</span>
             <a
               href="https://maps.app.goo.gl/x3zVoKRs98Fu8LSe8"
               class="contact-link"
@@ -150,15 +170,25 @@
             >
           </li>
           <li>
-            <span class="contact-type">I:</span>
+            <span class="contact-type">
+              <img src="./icons/insta.svg" alt="Instagram">:
+            </span>
             <a
               href="https://www.instagram.com/dainntyy?igsh=OHV1eWxmY3M5cnU4"
               class="contact-link"
               >@dainntyy</a
             >
           </li>
+          <li>
+            <span class="contact-type">
+              <img src="./icons/github.svg" alt="Github">:
+            </span>
+            <a href="https://github.com/dainntyy" class="contact-link">@dainntyy</a>
+          </li>
         </ul>
       </section>
     </main>
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
   </body>
 </html>

@@ -14,17 +14,25 @@
   src: url("./fonts/Sinteca-Regular.otf");
 }
 
-:root {
+.theme-light {
   --background-color: #F5EFEB;
   --text-color: #567CBD;
   --hover-color: #2F4156;
   --sky-color: #C8C9E6;
 }
 
+.theme-dark {
+    --background-color: #0E1F3B;
+    --text-color: #D3DADC ;
+    --hover-color: #4D7CBF;
+    --sky-color: #4D7CBF;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: var(--text-color);
 }
 
 body {
@@ -33,6 +41,10 @@ body {
   letter-spacing: .8px;
 
   @media only screen and (max-width: 768px) {
+    .logo {
+      font-size: 18px
+    }
+
     .banner {
       padding: 0 20px;
     }
@@ -92,6 +104,7 @@ h2 {
   width: 100%;
   color: var(--text-color);
   padding: 10px ;
+  gap: 10px;
 }
 
 .header-nav ul {
@@ -99,6 +112,11 @@ h2 {
   justify-content: space-between;
   align-items: center;
   gap: 15px;
+}
+
+.header-nav ul li {
+  text-wrap: wrap;
+  text-align: center;
 }
 
 .header-nav ul li a {
@@ -118,6 +136,7 @@ h2 {
   flex-direction: column;
   font-size: 22px;
   font-family: 'Nevrada', serif;
+  color: var(--text-color);
 }
 
 .name {
@@ -126,6 +145,75 @@ h2 {
 
 .surname {
   margin-top: 0;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 40px;
+  width: 40px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url('https://i.ibb.co/FxzBYR9/night.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: var(--text-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--background-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
 
 .banner {
@@ -195,15 +283,14 @@ h2 {
 .about-me,
 .projects,
 .skills,
-.contacts {
+.contacts,
+.certificates {
   color: var(--text-color);
   display: flex;
   justify-content: center;
 }
 
-.about-container h2, 
-.projects h2,
-.skills h2 {
+.section-name {
 font-family: 'Nevrada', serif;
 font-size: 40px;
 }
@@ -325,10 +412,56 @@ font-size: 40px;
   padding-left: 0;
 }
 
+.contact-box li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.contact-type {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .contact-link {
   color: var(--background-color);
   line-height: 2.5;
   text-decoration: underline;
   text-align: center;
   letter-spacing: 1px;
+}
+
+.image-container img {
+  height: 500px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.certificates {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cert-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cert-item h3 {
+  text-decoration: underline;
+}
+
+.cert-item p {
+  text-align: center;
+  width: 80%;
 }
