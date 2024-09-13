@@ -1,59 +1,42 @@
-/* rubik-regular - latin */
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
+  font-family: "Nevrada";
   font-style: normal;
   font-weight: 400;
-  src: url("./fonts/rubik-v28-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./fonts/Nevrada_Neue.otf");
 }
-/* rubik-500 - latin */
+
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
+  font-family: "Sinteca";
   font-style: normal;
-  font-weight: 500;
-  src: url("./fonts/rubik-v28-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  font-weight: 400;
+  src: url("./fonts/Sinteca-Regular.otf");
 }
-/* rubik-600 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 600;
-  src: url("./fonts/rubik-v28-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-700 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 700;
-  src: url("./fonts/rubik-v28-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-800 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 800;
-  src: url("./fonts/rubik-v28-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
-}
-/* rubik-900 - latin */
-@font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
-  font-family: "Rubik";
-  font-style: normal;
-  font-weight: 900;
-  src: url("./fonts/rubik-v28-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+
+:root {
+  --background-color: #F5EFEB;
+  --text-color: #567CBD;
+  --hover-color: #2F4156;
+  --sky-color: #C8C9E6;
 }
 
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  background-color: #001427;
-  font-family: "Rubik", sans-serif;
+  background-color: var(--background-color);
+  font-family: "Sinteca", sans-serif;
+  letter-spacing: .8px;
+
+  @media only screen and (max-width: 768px) {
+    .banner {
+      padding: 0 20px;
+    }
+  }
 
   @media only screen and (max-width: 480px) {
 
@@ -90,6 +73,7 @@ li {
 
 a {
   text-decoration: none;
+  color: var(--background-color);
 }
 
 section {
@@ -106,7 +90,8 @@ h2 {
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  color: rgba(244, 213, 141, 0.7);
+  color: var(--text-color);
+  padding: 10px ;
 }
 
 .header-nav ul {
@@ -117,7 +102,13 @@ h2 {
 }
 
 .header-nav ul li a {
-  color: #8d0801;
+  color: var(--text-color);
+  transition: color 0.5s ease;
+}
+
+.header-nav ul li a:hover, 
+.header-nav ul li a:focus {
+  color: var(--hover-color);
 }
 
 .logo {
@@ -125,10 +116,12 @@ h2 {
   justify-content: center;
   align-items: start;
   flex-direction: column;
+  font-size: 22px;
+  font-family: 'Nevrada', serif;
 }
 
 .name {
-  margin-bottom: 5px;
+  margin-bottom: 0;
 }
 
 .surname {
@@ -142,13 +135,14 @@ h2 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  padding: 0 100px;
 }
 
 .daria-photo {
   min-width: 50%;
   max-height: 400px;
-  border-radius: 4dvh;
-  box-shadow: 0 0 15px rgba(244, 213, 141, 0.403);
+  border-radius: 50%;
+  box-shadow: 0 10px 10px rgba(244, 213, 141, 0.403);
 }
 
 .banner-container {
@@ -157,38 +151,61 @@ h2 {
   justify-content: center;
   align-items: start;
   font-size: 20px;
+  color: var(--text-color);
 }
 
 .hello {
-  font-size: 18px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
 .banner-container h1 {
-  font-size: 48px;
+  font-size: 50px;
   margin: 0;
+  font-family: 'Nevrada', serif;
+}
+
+.frontend {
+  margin-top: 10px;
 }
 
 .banner-container button {
-  background-color: #bf0603;
+  background-color: var(--text-color);
   border: none;
   border-radius: 20px;
   cursor: pointer;
   height: 40px;
   width: 80%;
-  box-shadow: 0 0 10px rgba(244, 213, 141, 0.481);
+  /* box-shadow: 0 0 10px rgba(244, 213, 141, 0.481); */
   font-family: "Rubik", sans-serif;
-  color: #f4d58d;
+  color: var(--background-color);
   font-size: 100%;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  transition: background-color 0.5s ease;
+}
+
+.banner-container button:hover,
+.banner-container button:focus {
+  background-color: var(--hover-color);
+  
+  box-shadow: 0 0 10px rgba(244, 213, 141);
 }
 
 .about-me,
 .projects,
 .skills,
 .contacts {
-  color: #f4d58d;
+  color: var(--text-color);
   display: flex;
   justify-content: center;
+}
+
+.about-container h2, 
+.projects h2,
+.skills h2 {
+font-family: 'Nevrada', serif;
+font-size: 40px;
 }
 
 .about-container {
@@ -198,6 +215,8 @@ h2 {
   align-items: center;
   max-width: 80%;
   text-align: center;
+  font-weight: bold;
+  line-height: 1.5;
 }
 
 .projects {
@@ -228,7 +247,13 @@ h2 {
   width: 250px;
   min-height: 190px;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(244, 213, 141, 0.158);
+  /* box-shadow: 0 0 15px rgba(244, 213, 141, 0.158); */
+  transition: width 0.5s ease;
+}
+
+.projects-box li img:hover,
+.projects-box li img:focus {
+  width: 270px;
 }
 
 .project {
@@ -246,19 +271,30 @@ h2 {
 
 .leader {
   text-wrap: wrap;
+  width: 200px;
 }
 
 .skills-box {
   padding: 0;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 80%;
+  flex-wrap: wrap;
+  gap: 10%;
 }
 
 .skills-box li {
-  margin-bottom: 20px;
-  width: 260px;
+ margin-bottom: 20px;
+ background-color: var(--sky-color);
+ color: var(--test-color);
+ padding: 20px;
+ border-radius: 50%;
+ font-size: 16px;
+ font-weight: 700;
+ font-style: italic;
+ box-shadow: 2px 2px 2px;
 }
 
 .soft-items {
@@ -273,29 +309,15 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(244, 213, 141, 0.708);
-  color: #001427;
+  background-color: var(--hover-color);
+  color: var(--background-color);
   width: 100%;
-  margin-bottom: 0;
+  margin: 0;
   padding: 40px;
 }
 
-.contacts-button {
-  background-color: #bf0603;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  height: 40px;
-  width: 150px;
-  font-family: "Rubik", sans-serif;
-  color: #f4d58d;
-  font-size: 100%;
-  font-weight: 500;
-  box-shadow: 0 10px 10px rgba(8, 6, 54, 0.592);
-}
 
 .contact-box {
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -304,8 +326,9 @@ h2 {
 }
 
 .contact-link {
-  color: #001427;
+  color: var(--background-color);
   line-height: 2.5;
   text-decoration: underline;
   text-align: center;
+  letter-spacing: 1px;
 }
