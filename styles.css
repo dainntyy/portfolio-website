@@ -8,10 +8,34 @@
 
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "EBGaramond";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./fonts/EBGaramond-ExtraBold.ttf");
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Sinteca";
   font-style: normal;
   font-weight: 400;
   src: url("./fonts/Sinteca-Regular.otf");
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Sinteca";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/Sinteca-Bold.otf");
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Sinteca";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./fonts/Sinteca-Italic.otf");
 }
 
 .theme-light {
@@ -135,7 +159,7 @@ h2 {
   align-items: start;
   flex-direction: column;
   font-size: 22px;
-  font-family: 'Nevrada', serif;
+  font-family: 'Nevrada', 'EBGaramond', serif;
   color: var(--text-color);
 }
 
@@ -145,6 +169,19 @@ h2 {
 
 .surname {
   margin-top: 0;
+}
+
+.lang-button {
+  border-color: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--text-color);
+  background-color: transparent;
+  transition: color 0.5s ease;
+}
+
+.lang-button:hover {
+  color: var(--hover-color);
 }
 
 .switch {

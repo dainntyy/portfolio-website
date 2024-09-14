@@ -11,24 +11,30 @@
       <nav class="header-nav">
         <div>
           <a href="#" class="logo">
-            <h3 class="name">Daria</h3>
-            <h3 class="surname">Zakharchenko</h3>
+            <h3 class="name" data-lang-uk="Дар'я" data-lang-en="Daria">Daria</h3>
+            <h3 class="surname" data-lang-uk="Захарченко" data-lang-en="Zakharchenko">Zakharchenko</h3>
           </a>
         </div>
         <ul class="navigation">
           <li>
-            <a href="#about-me">About me</a>
+            <a href="#about-me" data-lang-uk="Про мене" data-lang-en="About me">About me</a>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <a href="#projects" data-lang-uk="Проєкти" data-lang-en="Projects">Projects</a>
           </li>
           <li>
-            <a href="#tech-skills">Skills</a>
+            <a href="#tech-skills" data-lang-uk="Навички" data-lang-en="Skills">Skills</a>
           </li>
           <li>
-            <a href="#contacts">Contacts</a>
+            <a href="#contacts" data-lang-uk="Контакти" data-lang-en="Contacts">Contacts</a>
+          </li>
+          <li>
           </li>
         </ul>
+        <div>
+          <button id="uk-button" class="lang-button">Uk</button>
+          <button id="en-button" class="lang-button">En</button>
+        </div>
         <label id="switch" class="switch">
             <input type="checkbox" onchange="toggleTheme()" id="slider">
             <span class="slider round"></span>
@@ -38,10 +44,10 @@
     <main>
       <section class="banner">
         <div class="banner-container">
-          <p class="hello">Hello</p>
-          <h1>I'm Daria</h1>
-          <p class="frontend">Front-End Engenieer</p>
-          <button><a href="#contacts">Hire me</a></button>
+          <p class="hello" data-lang-uk="Привіт" data-lang-en="Hello">Hello</p>
+          <h1 data-lang-uk="Я Дар'я" data-lang-en="I'm Daria">I'm Daria</h1>
+          <p class="frontend" data-lang-uk="Front-End Розробник" data-lang-en="Front-End Engenieer">Front-End Engenieer</p>
+          <button><a href="#contacts" data-lang-uk="Зв'язатись" data-lang-en="Hire me">Hire me</a></button>
         </div>
         <div>
           <img
@@ -53,23 +59,33 @@
       </section>
       <section id="about-me" class="about-me">
         <div class="about-container">
-          <h2 class="section-name">About me</h2>
-          <p>Hi, I'm Daria, a fourth-year student of Sumy State University.</p>
-          <p>
+          <h2 class="section-name" data-lang-uk="Про мене" data-lang-en="About me">About me</h2>
+          <p data-lang-uk="Привіт, я Дар'я, студентка 4 курсу Сумського державного університету." data-lang-en="Hi, I'm Daria, a fourth-year student of Sumy State University.">
+            Hi, I'm Daria, a fourth-year student of Sumy State University.
+          </p>
+          <p data-lang-uk="Швидко навчаюсь, з чудовими аналітичними здібностями, працьовита
+            студентка спеціальності 'Комп'ютерні науки' з хорошим знанням англійської мови. Шукаю посаду в середовищі, яке наголошує на
+            роботі в команді та заохочує навчання на практиці. Вмотивована і прагну
+            просувати свою кар'єру в орієнтованій на зростання технічно передовій організації." data-lang-en="Fast learner, analitical and hard-working computer technology
+            student with good Englisch language knowlege. Seeking a position in an environment which emphasizes
+            teamwork and encourages learning by doing. Motivated and eager to
+            advance my career with a growth-oriented, technically-advanced
+            organization.">
             Fast learner, analitical and hard-working computer technology
             student with good Englisch language knowlege. Seeking a position in an environment which emphasizes
             teamwork and encourages learning by doing. Motivated and eager to
             advance my career with a growth-oriented, technically-advanced
             organization.
           </p>
-          <p>
+          <p data-lang-uk="У вільний час люблю читати будь-яку літературу, малювати та пізнавати щось нове." data-lang-en="In my free time I like to read any kind of literature, draw and
+            learn something new.">
             In my free time I like to read any kind of literature, draw and
             learn something new.
           </p>
         </div>
       </section>
       <section id="projects" class="projects">
-        <h2 class="section-name">Projects</h2>
+        <h2 class="section-name" data-lang-uk="Проєкти" data-lang-en="Projects">Projects</h2>
         <ul class="projects-box">
           <li class="project1">
             <a href="https://dainntyy.github.io/construction_company/" target="_blank">
@@ -132,11 +148,19 @@
         </ol>
       </section>
       <section id="certificates" class="certificates">
-        <h2 class="section-name">Certificates</h2>
+        <h2 class="section-name" data-lang-uk="Сертифікати" data-lang-en="Certificates">Certificates</h2>
         <ul class="cert-box">
           <li class="cert-item">
             <h3>AINTA: An Invitation To Act</h3>
-            <p>Volunteering project in Greece for refugees from different countries. We provided interesting activities for the mental, and physical well-being of refugees, their environmental awareness etc.</p>
+            <p data-lang-uk="Волонтерський проект у Греції для біженців з різних країн. 
+            Ми забезпечили цікаві заходи для психічного та фізичного благополуччя біженців, 
+            їхньої екологічної свідомості тощо." data-lang-en="Volunteering project in Greece for refugees from different countries. 
+              We provided interesting activities for the mental, and physical well-being of refugees, 
+              their environmental awareness etc.">
+              Volunteering project in Greece for refugees from different countries. 
+              We provided interesting activities for the mental, and physical well-being of refugees, 
+              their environmental awareness etc.
+            </p>
             <div class="image-container">
               <img id="image1" src="./images/AINTA.jpeg" alt="ESC Certificate" class="certificate-img">
             </div>
@@ -144,7 +168,7 @@
         </ul>
       </section>
       <section id="contacts" class="contacts">
-        <h2 class="footer-name">Have any projects in mind?</h2>
+        <h2 class="footer-name" data-lang-uk="Плануєте якийсь проєкт?" data-lang-en="Have any projects in mind?">Have any projects in mind?</h2>
         <ul class="contact-box">
           <li>
             <span class="contact-type">
@@ -190,5 +214,6 @@
     </main>
     <script src="./script.js"></script>
     <script src="./script2.js"></script>
+    <script src="./script3.js"></script>
   </body>
 </html>
