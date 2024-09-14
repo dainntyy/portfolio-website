@@ -495,10 +495,16 @@ font-size: 40px;
 }
 
 .cert-item h3 {
+  margin-top: 10px;
   text-decoration: underline;
 }
 
 .cert-item p {
   text-align: center;
   width: 80%;
+}
+
+.cert-img {
+  width: 50%;
+  min-width: 280px;
 }
